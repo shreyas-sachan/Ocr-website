@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Simple web app to extract text from Image {% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+                <div class="col col-md-auto">
+                    <h3> A simple web app to extract text from Images, 
+                        locating each word in Image and 
+                    searching words in Image. </h3>
+                    <br>
+                    <br>
+                    <h4> To get started, click one of these following buttons </h4>
+                    <br>
+                    <br>
+                </div>
+        </div>
+    </div>
+        <div class="container">
+        <div class="row justify-content-md-center">
+                <div class="col col-md-auto">
+
+                    <a href=" {{ url_for('text') }} ">
+                        <button type="button" class="btn btn-primary btn-lg",>Text from Image</button> 
+                    </a>
+
+                    <a href=" {{ url_for('word') }} ">
+                        <button type="button" class="btn btn-secondary btn-lg">Locate words</button>
+                    </a>
+
+                    <a href=" {{ url_for('char') }} ">
+                        <button type="button" class="btn btn-success btn-lg">Locate Characters</button>
+                    </a>
+
+                </div>
+        </div>
+    </div>
+
+{% endblock %}
